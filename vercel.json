@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/index.py",
+      "use": "@vercel/python",
+      "config": {
+        "maxLambdaSize": "50mb"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "api/index.py"
+    }
+  ],
+  "env": {
+    "FIREBASE_SA":       "@firebase_sa",
+    "RELEASE_VERSION":   "OB55",
+    "GAME_VERSION":      "1.111.1"
+  },
+  "functions": {
+    "api/index.py": {
+      "maxDuration": 60,
+      "memory":      1024
+    }
+  }
+}
