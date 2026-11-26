@@ -1,0 +1,31 @@
+# Credentials — JANGAN COMMIT
+firebase_sa.json
+.env
+.env.local
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+env/
+.venv/
+dist/
+build/
+*.egg-info/
+
+# Vercel
+.vercel/
+
+# Proto compiled (lo generate sendiri)
+proto/my_pb2.py
+proto/output_pb2.py
+
+# OS
+.DS_Store
+Thumbs.db
